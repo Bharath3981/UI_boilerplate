@@ -1,8 +1,13 @@
 import Router from './Router';
+import ThemeProviders from './ThemeProviders';
 import '../styles/App.css';
 
 function App() {
-  return <Router />;
+  return (
+    <ThemeProviders>
+      <Router />
+    </ThemeProviders>
+  );
 }
 
 export default App;

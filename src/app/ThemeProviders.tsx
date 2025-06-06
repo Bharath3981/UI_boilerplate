@@ -1,10 +1,10 @@
 // src/app/Providers.tsx
 import React from 'react';
 import { CssBaseline, ThemeProvider } from '@mui/material';
-import { lightTheme, darkTheme } from '../config/theme';
+import { lightTheme, darkTheme } from '../config/theme/index';
 import { useThemeStore } from '../shared/state/store.theme';
 
-const Providers = ({ children }: { children: React.ReactNode }) => {
+const ThemeProviders = ({ children }: { children: React.ReactNode }) => {
   const mode = useThemeStore((s) => s.mode);
   const theme = mode === 'light' ? lightTheme : darkTheme;
 
@@ -16,4 +16,4 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default Providers;
+export default ThemeProviders;
